@@ -4,8 +4,8 @@ from tkinter import *
 from tkinter import ttk
 import tkinter.messagebox
 
-# Function to load Item Spreadsheet.
 def Load_Items():
+    """Function to load Item Spreadsheet."""
     cols = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
     rows = 16
     Items = pd.read_excel('Items.xlsx', usecols=cols, nrows=rows)
@@ -13,8 +13,8 @@ def Load_Items():
     
     return Items
 
-# Function to load Champion spreasheet.
 def Load_Champs():
+    """Function to load Champion spreasheet."""
     cols = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
     rows = 156
     Champ_Base_Stats = pd.read_excel('Champion_Stats.xlsx', usecols=cols, nrows=rows)
@@ -23,7 +23,8 @@ def Load_Champs():
     return Champ_Base_Stats
 
 
-def myInputs(): # Function that uses the inputs and assigns them as variables.
+def myInputs():
+    """Function that uses the inputs and assigns them as variables."""
     global inputChampion
     global lvl
     global inputItem1
@@ -66,7 +67,7 @@ def item_select(input_item, column):
     i = int(Item_Val.iloc[:,n])
     return i
 
-def builder():
+def main():
     HP = base(inputChampion, 1)
     HPg = base(inputChampion,2)
     MP = base(inputChampion,3)
@@ -416,4 +417,4 @@ if __name__== "__main__":
     root.protocol("WM_DELETE_WINDOW", on_closing)
 
     root.mainloop()
-    builder()
+    main()
