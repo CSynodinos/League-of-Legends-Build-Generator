@@ -4,17 +4,17 @@ import numpy as np
 import csv
 import os
 
-def data_version():
+def version():
     ddragon = "https://ddragon.leagueoflegends.com/realms/euw.json"
     euw_json = requests.get(ddragon).json()
     return euw_json['n']['champion']
 
 
 def build_champ_data_url():
-    return "http://ddragon.leagueoflegends.com/cdn/" + data_version() + "/data/en_GB/champion.json"
+    return "http://ddragon.leagueoflegends.com/cdn/" + version() + "/data/en_GB/champion.json"
 
 def build_item_data_url():
-    return "http://ddragon.leagueoflegends.com/cdn/" + data_version() + "/data/en_GB/item.json"
+    return "http://ddragon.leagueoflegends.com/cdn/" + version() + "/data/en_GB/item.json"
 
 def get_champ_json():
     data_url = build_champ_data_url()
@@ -93,6 +93,7 @@ def champions():
 
 
 ######### need to add the numbers for each item.
+
 def items():
     data_json, item_list = get_item_json()
     file_name = 'Item_Stats.csv'
