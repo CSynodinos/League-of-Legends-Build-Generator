@@ -5,12 +5,15 @@ import os
 
 def data_version():
     """Finds game version using the Riot Games API."""
+    
     server_json = "https://ddragon.leagueoflegends.com/realms/euw.json"
     euw_json = requests.get(server_json).json()
+    
     return euw_json['n']['champion']
 
 class api():
     """Gets champion and item data urls using the Riot Games API."""
+    
     def __init__(self, dragon, champurl, itemurl):
         self.dragon = dragon
         self.champurl = champurl
@@ -26,16 +29,20 @@ d = api("http://ddragon.leagueoflegends.com/cdn/", "/data/en_GB/champion.json", 
 
 def get_champ_json():
     """Gets the champion json from the current game version url."""
+    
     data_url = d.build_champ_data_url()
     data_json = requests.get(data_url).json()
     champ_list = data_json['data'].keys()
+    
     return data_json, champ_list
 
 def get_item_json():
     """Gets the item json from the current game version url."""
+    
     data_url = d.build_item_data_url()
     data_json = requests.get(data_url).json()
     item_list = data_json['data'].keys()
+    
     return data_json, item_list
 
 def champ_headings():
