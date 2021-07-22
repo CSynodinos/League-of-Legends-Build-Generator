@@ -212,15 +212,15 @@ def builder():
         Critical_Strike = Critical_Striket
         Life_Steal = Life_Stealt
 
-    ## Attack Damage.
+    # Attack Damage.
     # if checks if the selected champion is Jhin.
-    if inputChampion in ('Jhin'):
-        ### Function for the counter added inthe ad bonus Jhin gets from lvl ups.      
+    if inputChampion in ('Jhin'):  
         def Counter(counter_1):
+            """Function for the counter added inthe ad bonus Jhin gets from lvl ups."""
             counter_1 = counter_1 + lvl
             return counter_1
 
-        ### if sets the bonus lvl ad % according to the input lvl.      
+        # if sets the bonus lvl ad % according to the input lvl.      
         if 1 <= lvl <= 9: 
             counter_1 = 0
             for i in range(1):
