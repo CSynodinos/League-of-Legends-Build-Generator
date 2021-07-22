@@ -16,7 +16,6 @@ class api():
         self.champurl = champurl
         self.itemurl = itemurl
         
-        
     def build_champ_data_url(self):
         return self.dragon + data_version() + self.champurl
 
