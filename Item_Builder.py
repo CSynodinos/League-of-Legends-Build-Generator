@@ -223,14 +223,16 @@ def builder():
         # if sets the bonus lvl ad % according to the input lvl.      
         if 1 <= lvl <= 9: 
             counter_1 = 0
+            extra = 3
             for i in range(1):
                 counter_1 = Counter(counter_1)
-                bonus_lvl_AD = 3 + counter_1
+                bonus_lvl_AD = extra + counter_1
         elif 10 <= lvl < 11:
             counter_1 = 0
+            extra = 4
             for i in range(1):
                 counter_1 = Counter(counter_1)
-                bonus_lvl_AD = 4 + counter_1
+                bonus_lvl_AD = extra + counter_1
         elif 11 <= lvl < 12:
             counter_1 = 1
             for i in range(1):
