@@ -347,7 +347,7 @@ def builder():
     workbook.close()
     tkinter.messagebox.showinfo("Status", "Build Generated. Press OK to continue")
 
-def main():
+if __name__== "__main__":
     # Indexing of Item Spreadsheet.
     df1 = pd.DataFrame(Load_Items(), columns = ['Item', 'Item_AD', 'Item_AP', 'Item_AS', 'Item_Health', 'Item_Mana', 'Item_AR', 'Item_MR', 
                                                 'Item_Critical', 'Item_Life_Steal', 'Item_Haste', 'Item_MS'])
@@ -441,6 +441,3 @@ def main():
     root.mainloop()
     
     builder()
-
-if __name__== "__main__":
-    main()
