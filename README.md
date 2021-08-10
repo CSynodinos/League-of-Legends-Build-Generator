@@ -1,1 +1,1 @@
-Build generator for League of Legends (LOL). Data for the champion list is downloaded with Riot's API. Items list API is under development. A temporary excel file with a few item data is used for testing.
+Build generator for League of Legends (LOL). Data for the champion list is downloaded via Riot's API. Items list API function is under development. A temporary xlsx file with a few item data is used for testing.
